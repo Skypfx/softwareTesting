@@ -1,0 +1,51 @@
+/* pages/orders/orders.wxss */
+
+.order-box{
+    padding-bottom: 100rpx;
+}
+.order-list{
+    position: relative;
+    padding: 20rpx 20rpx 20rpx 285rpx;
+    height: 185rpx;
+     border-bottom: 1rpx solid #e9e9e9;
+}
+.order-list .order-thumb{
+    position: absolute;
+    top: 20rpx;
+    left: 85rpx;
+    width: 185rpx;
+    height: 185rpx;
+}
+.order-list .order-pro-name{
+    display: inline-block;
+    width: 300rpx;
+    height: 105rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+}
+.order-list .order-pro-price{
+    display: inline-block;
+    float: right;
+    height: 105rpx;
+    line-height: 50rpx;
+}
+.order-list .order-count-box{
+    position: absolute;
+    left: 285;
+    bottom: 20rpx;
+    width: 250rpx;
+    height: 80rpx;
+}
+.order-list .order-count-box text{
+    display: inline-block;
+    line-height: 80rpx;
+    text-align: center;
+}
+.order-count-num{
+    width: 150rpx;
+}
+.order-no-data{
+    padding:40rpx 0;
+    color: #999;
+    text-align: center;
+}

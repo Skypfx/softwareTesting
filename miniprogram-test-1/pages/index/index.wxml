@@ -1,0 +1,49 @@
+<view class="container">
+<swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="100%"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class='space'></view>
+   <view class="search">
+        <navigator url="../search/search">
+            <view class="search-text">
+                <icon class="weui-icon-search_in-box search-icon" type="search" size="14"></icon>
+                搜 索
+            </view>
+        </navigator>
+    </view>
+    <image src='../../images/nav/top.gif' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+    <text >商品类别</text>
+    <view class='space'></view>
+    <view class='category-list'>
+    <view class='category-box' wx:for="{{category}}" wx:key="{{index}}">
+    <view class='img-box'>
+      <navigator url='../category/category?id={{item}}'>
+      <image src='/images/nav/{{item}}.png' class='img'></image>     
+      </navigator>
+      </view>
+    </view>
+    </view>
+  <text class ='list-name' >商品列表</text>
+  <view class='space'></view>
+  <view class='items-list'>
+    <view class="item-box" wx:for="{{items}}" bindtap="toDetailsTap" data-id="{{item.FOOD_ID}}">
+      <view class="img-box">
+        <image src="/images/items/{{item.FOOD_ID}}.jpg" class="image" mode="aspectFill"           lazy-load="true" />
+      </view>
+      <view class="goods-title">{{item.FOOD_NAME}}</view>
+      <view style='display:flex;'>
+        <view class="goods-price">¥ {{item.FOOD_PRICE}}</view>
+      </view> 
+    </view>
+  </view>
+  <view class='space'></view>
+  <view class='bottom'>
+      <text>我也是有底线滴~</text>
+  </view>
+  <view class='space'></view>
+  <view class='space'></view>
+</view>
