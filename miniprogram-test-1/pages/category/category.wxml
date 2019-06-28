@@ -1,0 +1,21 @@
+<!--pages/catagory/catagory.wxml-->
+<text class ='list-name' style='text-align:center'>{{type}}</text>
+  <view class='space'></view>
+  <view class='items-list'>
+    <view class="item-box" wx:for="{{items}}"  bindtap="toDetailsTap" data-id="{{item.FOOD_ID}}">
+      <view class="img-box">
+        <image src="/images/items/{{item.FOOD_ID}}.jpg" class="image" mode="aspectFill"           lazy-load="true" />
+      </view>
+      <view class="goods-title">{{item.FOOD_NAME}}</view>
+      <view style='display:flex;'>
+        <view class="goods-price">¥ {{item.FOOD_PRICE}}</view>
+      </view> 
+    </view>
+  </view>
+  <view class='space'></view>
+  <view class='bottom'>
+      <text>我也是有底线滴~</text>
+  </view>
+  <view class='space'></view>
+  <view class='space'></view>
+

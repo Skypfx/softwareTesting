@@ -1,0 +1,22 @@
+<!--pages/orders/orders.wxml-->
+<view class='main'>
+  <view wx:if="{{hasList}}">
+  <text>我的订单</text>
+  <view class="order-box">
+            <view class="order-list" wx:for="{{orders}}" wx:key="{{index}}">
+                <navigator url="../item-detail/index?id={{item.FOOD_ID}}">
+                <image class="order-thumb" src="../../images/items/{{item.FOOD_ID}}.jpg"></image>
+                </navigator>
+                <text class="order-pro-name">{{item.FOOD_NAME}}</text>
+                <text class="order-pro-price">￥{{item.FOOD_PRICE}}*{{item.num}}</text>
+                <view class="order-count-box">
+                    <text class="order-count-num">数量:{{item.num}}</text>
+                </view>
+            </view>
+        </view>
+  </view>
+   <view wx:else>
+        <view class="order-no-data">没有订单哦~</view>
+    </view>
+</view>
+

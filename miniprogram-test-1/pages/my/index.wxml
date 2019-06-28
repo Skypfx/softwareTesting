@@ -1,0 +1,16 @@
+<!--pages/my/index.wxml-->
+<view class='userInfo'>
+  <view class='user-img'>
+    <open-data type="userAvatarUrl"></open-data>  
+  </view>  
+  <view class="user-name">
+  <text>昵称：</text>
+   <open-data type="userNickName" lang="zh_CN" ></open-data>
+  </view> 
+  <text class='money'>余额：¥ 100</text>
+</view>  
+<navigator url='../orders/orders' class='my-order'>
+  <view>我的订单</view>
+</navigator>
+
+

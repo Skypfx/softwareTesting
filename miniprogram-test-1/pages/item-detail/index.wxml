@@ -1,0 +1,24 @@
+<view class="main">
+    <view class="items-box">
+        <image src="../../images/items/{{item[0].FOOD_ID}}.jpg" class="item-thumb"></image>
+        
+        <navigator open-type="switchTab" url="../cart/cart">
+            <view class="carts-icon {{scaleCart?'on':''}}">
+                <image src="/images/nav/cart2.png"></image>
+                <text class="carts-icon-num" wx:if="{{hasCarts}}">{{totalNum}}</text>
+            </view>
+        </navigator>
+        
+        <view class="items-operation">
+            <text class="items-operation-num">数量  {{num}}</text>
+            <text class="items-operation-add" bindtap="addCount">+</text>
+            <text class="items-operation-sub" bindtap="subCount">-</text>
+            <text class="items-to-cart" bindtap="addToCart">加入购物车</text>
+            <image src="/images/nav/cart1.png"  class="items-cart-img" bindtap="addToCart"></image>
+        </view>
+        <image wx:if="{{show}}" src="/images/nav/cart1.png" class="to-carts-icon"></image>
+        <view class="items-stock">库存：{{stock}}</view>
+        <view class="items-title">{{title}}</view>
+        <view class="items-price">￥ {{price}}</view>
+    </view>
+</view>
